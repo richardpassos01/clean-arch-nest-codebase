@@ -1,10 +1,17 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { DummyModule } from './apis/dummy/dummy.module';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    DummyModule,
+    MongooseModule.forRootAsync({
+      useFactory: () => ({
+        uri: 'mongodb://dummy:dummy_pass@localhost:27017/test',
+      }),
+    }),
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
