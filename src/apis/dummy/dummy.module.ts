@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { DummyController } from './controller/dummy.controller';
-import { GetDummy } from '../../application/dummy/use-cases/get.dummy';
-import { DummyRepositoryAbstract } from '../../domain/dummy/repositories/dummy.repository.abstract';
-import { DummyRepository } from '../../infrastructure/repositories/dummy.repository';
-import { GetDummyAbstract } from '../../domain/dummy/use-cases/get.dummy.abstract';
+import { DummyController } from '@apis/dummy/controller/dummy.controller';
+import { GetDummy } from '@application/dummy/use-cases/get.dummy';
+import { DummyRepositoryAbstract } from '@domain/dummy/repositories/dummy.repository.abstract';
+import { GetDummyAbstract } from '@domain/dummy/use-cases/get.dummy.abstract';
+import { DummyRepository } from '@infrastructure/repositories/dummy.repository';
 
 @Module({
   imports: [],

@@ -1,4 +1,4 @@
-import { Dummy } from '../../domain/dummy/dummy';
+import { Dummy } from '@domain/dummy/dummy';
 
 export class DummyMapper {
   public static mapToDict(dummy: Dummy) {
